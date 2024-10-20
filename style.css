@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+    font-style: swap;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+    --icon-clr: #ad28eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+
+body {
+    background-color: var(--light-pink);
+
+}
+
+main {
+    padding: 1em;
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+img:not(.icon) {
+    display: block;
+    width: 100%;
+}
+
+.desktop-bg,
+.mobile-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* top: 0;
+    z-index: -1;
+    position: absolute;
+    padding: 0; */
+}
+
+.mobile-bg {
+    display: none !important;
+}
+
+hr {
+    color: var(--light-pink);
+    opacity: 50%;
+    width: 100%;
+}
+
+p {
+    font-size: 16px !important;
+}
+
+.card {
+    margin: -11.5em auto;
+    background-color: var(--white);
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1.5em;
+    border-radius: 1em;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.title {
+    color: var(--dark-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    font-size: 3rem;
+}
+
+.title img {
+    width: 32px;
+    height: auto;
+}
+
+.question {
+    color: var(--dark-purple);
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+
+.question:hover {
+    color: var(--icon-clr);
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.answer {
+    font-weight: 400;
+    color: var(--grayish-purple);
+}
+
+.hide {
+    display: none;
+}
+
+.attribution {
+    display: block;
+    margin-top: 20em;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .desktop-bg {
+        display: none !important;
+    }
+
+    .mobile-bg {
+
+        display: block !important;
+    }
+
+    .card {
+        margin: -11.5em auto;
+    }
+}
